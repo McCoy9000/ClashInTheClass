@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="layout-pf layout-pf-fixed" lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">
+    <title>Panel de Control - Clash in the Class</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!--Barra de navegación-->
+        <!--.navbar-->
+        <nav class="navbar navbar-pf-vertical">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <img class="navbar-brand-icon" src="/assets/img/logo-alt.svg" alt="" /><img class="navbar-brand-name" src="/assets/img/brand-alt.svg" alt="Clash in the Class" />
+                </a>
+            </div><!--.navbar-header-->
+            
+            <!-- desplegables navbar -->
+            <nav class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
+
+                    <li class="dropdown">
+                        <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span title="Help" class="fa pficon-help"></span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#0">Help</a></li>
+                            <li><a href="#0">About</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span title="Username" class="fa pficon-user"></span> Brian Johnson <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#0">Preferences</a></li>
+                            <li><a href="#0">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav><!--.collapse-->
+        </nav><!--/.navbar-->
+
+        <!--Barra de navegación vertical-->
+        <!--.nav-pf-vertical with submenus-->
+        <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="adminusuarios.html">
+                        <span class="fa pficon-users" data-toggle="tooltip" title="Usuarios"></span>
+                        <span class="list-group-item-value">Usuarios</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="adminpartidas.html">
+                        <span class="fa pficon-zone" data-toggle="tooltip" title="Partidas"></span>
+                        <span class="list-group-item-value">Partidas</span>
+
+                    </a>
+                </li>
+                <li class="list-group-item active" data-target="#ipsum-secondary">
+                    <a href="admincartas.html">
+                        <span class="fa pficon-builder-image" data-toggle="tooltip" title="Cartas"></span>
+                        <span class="list-group-item-value">Cartas</span>
+                    </a>
+
+                </li>
+
+
+                <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
+                    <a href="#0">
+                        <span class="pficon pficon-user" data-toggle="tooltip" title="" data-original-title="User"></span>
+                        <span class="list-group-item-value">User</span>
+                    </a>
+                    <div id="user-secondary" class="nav-pf-secondary-nav">
+                        <div class="nav-item-pf-header">
+                            <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+                            <span>User</span>
+                        </div>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="#0">
+                                    <span class="list-group-item-value">Preferences</span>
+                                </a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <a href="#0">
+                                    <span class="list-group-item-value">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
+                    <a href="#0">
+                        <span class="pficon pficon-help" data-toggle="tooltip" title="" data-original-title="Help"></span>
+                        <span class="list-group-item-value">Help</span>
+                    </a>
+                    <div id="help-secondary" class="nav-pf-secondary-nav">
+                        <div class="nav-item-pf-header">
+                            <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+                            <span>Help</span>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="#0">
+                                    <span class="list-group-item-value">Help</span>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#0">
+                                    <span class="list-group-item-value">About</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div><!--/.nav-pf-vertical with submenus-->
+
+        <!--Sección principal-->
+        <!--.container-cards-pf-->
+      <div class="container-fluid">
+        <div class="row toolbar-pf">
+          <div class="col-sm-12">
+            <form class="toolbar-pf-actions">
+              <div class="form-group toolbar-pf-filter">
+                <label class="sr-only" for="filter">Name</label>
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li class="selected"><a href="#">Name</a></li>
+                      <li><a href="#">Type</a></li>
+                      <li><a href="#">Color</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
+                </div><!-- /input-group -->
+              </div>
+              <div class="form-group">
+                <div class="dropdown btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="selected"><a href="#">Name</a></li>
+                    <li><a href="#">Type</a></li>
+                    <li><a href="#">Last Modified</a></li>
+                  </ul>
+                </div>
+                <button class="btn btn-link" type="button">
+                  <span class="fa fa-sort-alpha-asc"></span>
+                </button>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-default" type="button">Action</button>
+                <button class="btn btn-default" type="button">Action</button>
+                <div class="dropdown btn-group  dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+              </div>
+              <div class="toolbar-pf-action-right">
+                <div class="form-group toolbar-pf-find">
+                  <button class="btn btn-link btn-find" type="button">
+                    <span class="fa fa-search"></span>
+                  </button>
+                  <div class="find-pf-dropdown-container">
+                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
+                    <div class="find-pf-buttons">
+                      <span class="find-pf-nums">1 of 3</span>
+                      <button class="btn btn-link" type="button">
+                        <span class="fa fa-angle-up"></span>
+                      </button>
+                      <button class="btn btn-link" type="button">
+                        <span class="fa fa-angle-down"></span>
+                      </button>
+                      <button class="btn btn-link btn-find-close" type="button">
+                        <span class="pficon pficon-close"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group toolbar-pf-view-selector">
+                  <button class="btn btn-link "><i class="fa fa-th"></i></button>
+                  <button class="btn btn-link "><i class="fa fa-th-large"></i></button>
+                  <button class="btn btn-link "><i class="fa fa-th-list"></i></button>
+                </div>
+              </div>
+            </form>
+            <div class="row toolbar-pf-results">
+              <div class="col-sm-12">
+                <h5>40 Results</h5>
+                <p>Active filters:</p>
+                <ul class="list-inline">
+                  <li>
+                    <span class="label label-info">
+                      Name: nameofthething
+                      <a href="#"><span class="pficon pficon-close"></span></a>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="label label-info">
+                      Name: nameofthething
+                      <a href="#"><span class="pficon pficon-close"></span></a>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="label label-info">
+                      Name: nameofthething
+                      <a href="#"><span class="pficon pficon-close"></span></a>
+                    </span>
+                  </li>
+                </ul>
+                <p><a href="#">Clear All Filters</a></p>
+              </div><!-- /col -->
+            </div><!-- /row -->
+          </div><!-- /col -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+
+        <div class="container-fluid">
+
+			<div class="list-group list-view-pf list-view-pf-view">
+
+			<div class="list-group-item">
+			<div class="list-group-item-header">
+			  <div class="list-view-pf-expand">
+				<span class="fa fa-angle-right"></span>
+			  </div>
+			  <div class="list-view-pf-checkbox">
+				<input type="checkbox">
+			  </div>
+			  <div class="list-view-pf-actions">
+				<button class="btn btn-default"><a href="paneldecontrol.html">Ver</a></button>
+				<div class="dropdown pull-right dropdown-kebab-pf">
+				  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<span class="fa fa-ellipsis-v"></span>
+				  </button>
+				  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+					<li><a href="#">Editar</a></li>
+					<li><a href="#">Eliminar</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="list-view-pf-main-info">
+				<div class="list-view-pf-left">
+				  <span class="fa pficon-image list-view-pf-icon-sm"></span>
+				</div>
+				<div class="list-view-pf-body">
+				  <div class="list-view-pf-description">
+					<div class="list-group-item-text">
+					  Bruja antideberes
+					</div>
+				  </div>
+				  <div class="list-view-pf-additional-info">
+					<div class="list-view-pf-additional-info-item">
+					  <span class="pficon pficon-volume"></span>
+					  <strong>3.000</strong> MTC
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			</div>
+
+			<div class="list-group-item">
+			<div class="list-group-item-header">
+			  <div class="list-view-pf-expand">
+				<span class="fa fa-angle-right"></span>
+			  </div>
+			  <div class="list-view-pf-checkbox">
+				<input type="checkbox">
+			  </div>
+			  <div class="list-view-pf-actions">
+				<button class="btn btn-default"><a href="paneldecontrol.html">Ver</a></button>
+				<div class="dropdown pull-right dropdown-kebab-pf">
+				  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<span class="fa fa-ellipsis-v"></span>
+				  </button>
+				  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+					<li><a href="#">Editar</a></li>
+					<li><a href="#">Eliminar</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="list-view-pf-main-info">
+				<div class="list-view-pf-left">
+				  <span class="fa pficon-image list-view-pf-icon-sm"></span>
+				</div>
+				<div class="list-view-pf-body">
+				  <div class="list-view-pf-description">
+					<div class="list-group-item-text">
+					  Bruja antideberes
+					</div>
+				  </div>
+				  <div class="list-view-pf-additional-info">
+					<div class="list-view-pf-additional-info-item">
+					  <span class="pficon pficon-volume"></span>
+					  <strong>3.000</strong> MTC
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			</div>
+
+			<div class="list-group-item">
+			<div class="list-group-item-header">
+			  <div class="list-view-pf-expand">
+				<span class="fa fa-angle-right"></span>
+			  </div>
+			  <div class="list-view-pf-checkbox">
+				<input type="checkbox">
+			  </div>
+			  <div class="list-view-pf-actions">
+				<button class="btn btn-default"><a href="paneldecontrol.html">Ver</a></button>
+				<div class="dropdown pull-right dropdown-kebab-pf">
+				  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<span class="fa fa-ellipsis-v"></span>
+				  </button>
+				  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+					<li><a href="#">Editar</a></li>
+					<li><a href="#">Eliminar</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="list-view-pf-main-info">
+				<div class="list-view-pf-left">
+				  <span class="fa pficon-image list-view-pf-icon-sm"></span>
+				</div>
+				<div class="list-view-pf-body">
+				  <div class="list-view-pf-description">
+					<div class="list-group-item-text">
+					  Bruja antideberes
+					</div>
+				  </div>
+				  <div class="list-view-pf-additional-info">
+					<div class="list-view-pf-additional-info-item">
+					  <span class="pficon pficon-volume"></span>
+					  <strong>3.000</strong> MTC
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			</div>
+
+			</div>
+
+
+        </div><!--/.container-list-->
+        
+    </div><!--/.container-->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/js/patternfly.min.js"></script>
+    <script src="components/c3/c3.min.js"></script>
+    <script src="components/d3/d3.min.js"></script>
+    <script src="components/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+    <!--Mantener altura cartas e iniciar navegación vertical-->
+    <script>
+        $(document).ready(function() {
+            // Row Checkbox Selection
+			$("input[type='checkbox']").change(function (e) {
+				if ($(this).is(":checked")) {
+					$(this).closest('.list-group-item').addClass("active");
+				} else {
+					$(this).closest('.list-group-item').removeClass("active");
+				}
+			});
+			// toggle dropdown menu
+			$('.list-view-pf-actions').on('show.bs.dropdown', function () {
+				var $this = $(this);
+				var $dropdown = $this.find('.dropdown');
+				var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+				$dropdown.toggleClass('dropup', space < 10);
+			});
+			// allow users to select multiple list items with shift key
+			$('.list-group').on('click', '.list-view-pf-checkbox>input', function(event) {
+      var $list = $('.list-group');
+      var prevIndex = $list.data('preIndex');
+      var $listItems = $list.children('.list-group-item');
+      var $currentItem = $(this).closest('.list-group-item');
+      if(event.shiftKey && prevIndex > -1 && this.checked) {
+        var currentIndex = $listItems.index($currentItem);
+        var $selectScope = currentIndex - prevIndex > 0
+          ? $currentItem.prevAll().not($listItems.eq(prevIndex).prevAll().addBack())
+          : $listItems.eq(prevIndex).prevAll().not($currentItem.prevAll().addBack());
+        $selectScope.addClass('active').find('.list-view-pf-checkbox').children('input').prop('checked', true);
+      }
+      $list.data('preIndex', this.checked ? $listItems.index($currentItem) : -1);
+    });
+
+
+
+            // Initialize the vertical navigation
+            $().setupVerticalNavigation(true);
+        });
+    </script>
+
+</body>
+
+</html>
